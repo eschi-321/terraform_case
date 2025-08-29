@@ -34,6 +34,11 @@ variable "ec2_subnet_id" {
   type        = string
 }
 
+variable "ec2_availability_zone" {
+  description = "Availability zone used for the ec2-instance."
+  type        = string
+}
+
 variable "ec2_encryption_key_arn" {
   description = "ARN of the kms-key used to encrypt the ec2-volumes."
   type        = string

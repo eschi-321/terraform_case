@@ -8,8 +8,4 @@ provider "aws" {
   alias  = "us_east_1"
 }
 
-data "aws_availability_zones" "available" {
-  state = "available"
-}
-
 data "aws_caller_identity" "current" {}

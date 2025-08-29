@@ -8,7 +8,7 @@ resource "aws_instance" "this" {
   provider               = aws.eu_central_1
   ami                    = var.ec2_instance_ami
   instance_type          = var.ec2_instance_type
-  availability_zone      = data.aws_availability_zones.available.names[0]
+  availability_zone      = var.ec2_availability_zone
   iam_instance_profile   = aws_iam_instance_profile.this.name
   vpc_security_group_ids = [aws_security_group.this.id]
   tags = merge(local.default_tags_ec2, {

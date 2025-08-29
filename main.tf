@@ -18,6 +18,7 @@ module "ec2_with_s3" {
   ec2_root_volume_size   = 20
   ec2_root_volume_type   = "gp3"
   ec2_subnet_id          = aws_subnet.private.id
+  ec2_availability_zone  = var.availability_zone
   s3_bucket_name         = "my-s3-bucket"
   s3_encryption_key_arn  = aws_kms_key.s3.arn
   s3_public_access_block = true
